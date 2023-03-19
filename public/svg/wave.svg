@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" display="block" preserveAspectRatio="xMidYMid" style="margin:auto;background:#000;z-index:1;position:relative" viewBox="0 0 690 132">
+  <g>
+    <linearGradient id="a" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <path fill="url(#a)" opacity=".99">
+      <animate attributeName="d" begin="0s" calcMode="spline" dur="6.25s" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.333;0.667;1" repeatCount="indefinite" values="M0 0L 0 99.76176469947924Q 115 119.81246017852186 230 98.52777749192448T 460 99.46837669733928T 690 99.12814365383247L 690 0 Z;M0 0L 0 98.80747340585323Q 115 121.04297568188042 230 99.07843295733811T 460 98.90879138032268T 690 99.17748797018108L 690 0 Z;M0 0L 0 98.58849604907306Q 115 114.58214349902764 230 98.71596089090582T 460 99.20652966195094T 690 99.50355267448184L 690 0 Z;M0 0L 0 99.76176469947924Q 115 119.81246017852186 230 98.52777749192448T 460 99.46837669733928T 690 99.12814365383247L 690 0 Z"/>
+    </path>
+  </g>
+</svg>
