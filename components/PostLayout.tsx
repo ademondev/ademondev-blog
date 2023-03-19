@@ -1,0 +1,35 @@
+import React, { FC } from 'react';
+import { siteTitle } from '../components/HomeLayout';
+import Image from 'next/image';
+import Head from 'next/head';
+import Header from './Header';
+import { Footer } from './Footer';
+import { Post } from './Post';
+
+interface Props {
+    children: React.ReactNode;
+}
+
+export const PostLayout: FC<Props> = ({ children }) => {
+    return (
+        <div className="">
+            <Head>
+                <link rel="icon" href="/favicon.ico" />
+                <meta
+                    name="description"
+                    content="Ademondev's blog website!"
+                />
+                <meta
+                    property="og:image"
+                    content={`https://og-image.vercel.app/${encodeURI(
+                        siteTitle,
+                    )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+                />
+                <meta name="og:title" content={siteTitle} />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Head>
+            <main>{children}</main>
+            <Footer black={false}/>
+        </div>
+    )
+}
