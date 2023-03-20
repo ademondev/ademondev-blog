@@ -1,6 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import Image from 'next/image';
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from 'react-icons/ai';
+import Link from 'next/link';
 
 interface Footer {
     black?: boolean
@@ -32,7 +33,7 @@ export const Footer: FC<Footer> = ({ black = true }) => {
                 md:flex-row md:justify-between md:pb-4
                 xl:max-w-7xl xl:mx-auto"
             >
-                <div className="flex justify-center p-2 border-b-slate-300 border-b
+                <Link href="/" className="flex justify-center p-2 border-b-slate-300 border-b
                     md:border-b-0 md:border-r-slate-300 md:border-r"
                 >
                     <Image src="/svg/mainLogo.svg" width={35} height={35} alt="ademondev logo"
@@ -41,7 +42,7 @@ export const Footer: FC<Footer> = ({ black = true }) => {
                     <div className="flex items-center">
                         <p className="text-md font-bold text-white mr-2">ademondev</p>
                     </div>
-                </div>
+                </Link>
                 <div className="flex items-center h-10 m-3">
                     {socials.map((social, index) => (
                         <FooterIcon key={index} url={social.url} icon={social.icon} />
