@@ -3,11 +3,12 @@ import { Combobox, Transition } from '@headlessui/react';
 import { GrSearch } from 'react-icons/gr';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { PostType } from './Header';
+import { HiOutlineXMark } from 'react-icons/hi2';
 import Link from 'next/link';
 
 export const HeaderCombobox: FC<PostType> = ({ postData }) => {
-  const [selectedPost, setSelectedPost] = useState('')
-  const [query, setQuery] = useState('')
+  const [selectedPost, setSelectedPost] = useState('');
+  const [query, setQuery] = useState('');
 
   const filteredpostData =
     query === ''
@@ -24,10 +25,13 @@ export const HeaderCombobox: FC<PostType> = ({ postData }) => {
             <GrSearch className='ml-3' />
             <Combobox.Input
               className="w-full outline-none py-1 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
-              displayValue={(postData: any) => postData.title}
               onChange={(event) => setQuery(event.target.value)}
               spellCheck={false}
               placeholder="Search posts..."
+            />
+            <HiOutlineXMark 
+              className={`mr-3 ${query === '' ? 'opacity-0' : 'opacity-100'}`} 
+              onClick={() => setQuery('')}
             />
           </div>
         </div>
@@ -45,32 +49,34 @@ export const HeaderCombobox: FC<PostType> = ({ postData }) => {
               </div>
             ) : (
               filteredpostData.map((postData) => (
-                  <Combobox.Option
-                    key={postData.id}
-                    className={({ active }) =>
-                      `relative cursor-pointer select-none py-2 pl-10 pr-4 ${active ? 'bg-logo-blue text-white' : 'text-gray-900'
-                      }`
-                    }
-                    value={postData}
-                  >
-                    {({ selected, active }) => (
-                      <>
-                        <span
-                          className={`block cursor-pointer truncate ${selected ? 'font-medium' : 'font-normal'}`}
-                        >
-                          {postData.title}
-                        </span>
-                        {selected ? (
+                <Link href={`/posts/${postData.id}`}>
+                    <Combobox.Option
+                      key={postData.id}
+                      className={({ active }) =>
+                        `relative cursor-pointer select-none py-2 pl-10 pr-4 ${active ? 'bg-logo-blue text-white' : 'text-gray-900'
+                        }`
+                      }
+                      value={postData}
+                    >
+                      {({ selected, active }) => (
+                        <>
                           <span
-                            className={`absolute cursor-pointer inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-white' : 'text-not-quite-black'
-                              }`}
+                            className={`block cursor-pointer truncate ${selected ? 'font-medium' : 'font-normal'}`}
                           >
-                            <AiOutlineCheck className='h-5 w-5' aria-hidden="true" />
+                            {postData.title}
                           </span>
-                        ) : null}
-                      </>
-                    )}
-                  </Combobox.Option>
+                          {selected ? (
+                            <span
+                              className={`absolute cursor-pointer inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-white' : 'text-not-quite-black'
+                                }`}
+                            >
+                              <AiOutlineCheck className='h-5 w-5' aria-hidden="true" />
+                            </span>
+                          ) : null}
+                        </>
+                      )}
+                    </Combobox.Option>
+                </Link>
               ))
             )}
           </Combobox.Options>
