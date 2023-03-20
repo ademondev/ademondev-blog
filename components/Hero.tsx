@@ -15,12 +15,12 @@ export const Hero: FC<Props> = (props) => {
                 md:col-start-1 md:col-end-8 md:py-20 md:font-bold
                 lg:text-center lg:col-start-2 lg:col-end-8 z-20"
             >
-                <div className="text-2xl font-bold mb-4 text-not-quite-black
+                <div className="text-3xl font-bold mb-4 text-not-quite-black
                     md:text-6xl"
                 >
                     Welcome to a piece of my <span className='font-bold bg-gradient-to-r from-blue-900 to-blue-600 text-transparent bg-clip-text'>mind</span>...
                 </div>
-                <div className='text-sm text-gray-500
+                <div className='text-md text-gray-500
                     md:text-lg'
                 >
                     ...where I share my experience for others to learn <span className='font-bold'>faster</span>
