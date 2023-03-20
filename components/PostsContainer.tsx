@@ -29,15 +29,13 @@ export const PostsContainer: FC<Props> = ({ postData }) => {
     return (
         <div className="bg-not-quite-black text-white flex flex-col justify-center items-center pb-16">
             <div
-                className="text-2xl text-left
-            md:text-5xl md:font-semibold md:mb-10"
+                className="text-2xl text-left mb-5 font-semibold
+                md:text-5xl md:font-semibold md:mb-10"
             >
                 Latest posts
             </div>
-            <div className="h-20 w-16">
-            </div>
             <div className="w-11/12
-            md:w-3/4
+                md:w-3/4
                 xl:max-w-7xl"
             >
                 {paginatedPosts.map((post) => {
@@ -46,7 +44,7 @@ export const PostsContainer: FC<Props> = ({ postData }) => {
                     );
                 })}
             </div>
-            <div className="">
+            <div className="mt-2">
                 <Pagination
                     items={postData.length}
                     pageSize={pageSize}
