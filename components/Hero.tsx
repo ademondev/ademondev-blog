@@ -28,7 +28,7 @@ export const Hero: FC<Props> = (props) => {
                 <div className="">
                     <Link href={`/posts/${props.id}`}>
                         <button className="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg mt-10 select-none
-                            transition-all duration-200 shadow-lg hover:shadow-blue-600 active:scale-95">
+                            transition-all duration-200 shadow-lg hover:shadow-blue-600 hover:scale-105 active:scale-95">
                             Read random post
                         </button>
                     </Link>
