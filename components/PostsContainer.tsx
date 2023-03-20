@@ -17,7 +17,7 @@ interface Props {
 
 export const PostsContainer: FC<Props> = ({ postData }) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const pageSize = 1;
+    const pageSize = 4;
 
     function onPageChange(page: number) {
         setCurrentPage(page);
