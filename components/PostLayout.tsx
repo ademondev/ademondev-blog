@@ -1,10 +1,7 @@
 import React, { FC } from 'react';
-import { siteTitle } from '../components/HomeLayout';
-import Image from 'next/image';
+import { siteTitle } from './HomeLayout';
 import Head from 'next/head';
-import Header from './Header';
 import { Footer } from './Footer';
-import { Post } from './Post';
 
 interface Props {
     children: React.ReactNode;
