@@ -22,16 +22,13 @@ export const Pagination: FC<PaginationProps> = ({ items, pageSize, currentPage, 
                     <li
                         key={page}
                         onClick={() => onPageChange(page)}
-                        className={`flex justify-center items-center h-6 w-6 rounded-md transition-all duration-200 text-black bg-white cursor-pointer
+                        className={`flex justify-center items-center h-6 w-6 rounded-md transition-all duration-200 text-black  cursor-pointer
                             mx-1
-                            hover:bg-blue-100 hover:shadow-blue-600 hover:shadow-sm
-                            ${currentPage === page ? 'bg-blue-600 text-white' : '' }
-                            ${currentPage === page ? 'hover:bg-blue-600' : ''}
+                              hover:shadow-sm hover:shadow-blue-600
+                            ${currentPage === page ? 'bg-blue-600 text-white hover:bg-blue-500' : 'bg-white hover:bg-blue-200' }
                         `}
                     >
-                        <a className='styleLink'>
                             {page}
-                        </a>
                     </li>
                 ))}
             </ul>
