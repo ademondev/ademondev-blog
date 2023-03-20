@@ -9,15 +9,15 @@ interface Footer {
 export const Footer: FC<Footer> = ({ black = true }) => {
     const socials: FooterIcon[] = [
         {
-            url: '#',
+            url: 'https://github.com/ademondev',
             icon: <AiFillGithub />
         },
         {
-            url: '#',
+            url: 'https://www.linkedin.com/in/alejandro-pedemonte-806131265/',
             icon: <AiFillLinkedin />
         },
         {
-            url: '#',
+            url: 'https://twitter.com/ademondev',
             icon: <AiOutlineTwitter />
         }
     ]
@@ -59,7 +59,7 @@ interface FooterIcon {
 
 const FooterIcon: FC<FooterIcon> = ({ url, icon }) => {
     return (
-        <a href={`${url}`} className="bg-white rounded-full p-2 mx-2 transition-all duration-200 hover:scale-105 active:scale-95">
+        <a href={`${url}`} target="_blank" className="bg-white rounded-full p-2 mx-2 transition-all duration-200 hover:scale-105 active:scale-95">
             {icon}
         </a>
     );
