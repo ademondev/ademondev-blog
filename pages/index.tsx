@@ -22,8 +22,9 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <Header postData={allPostsData}/>
-      <Hero />
-      {console.log(allPostsData)}
+      <div className="mt-16">
+        <Hero />
+      </div>
       <PostsContainer postData={allPostsData} />
     </HomeLayout>
   )
