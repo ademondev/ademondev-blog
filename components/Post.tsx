@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Date from '../components/Date';
+import Date from './Date';
 import Image from 'next/image';
 import Markdown from 'markdown-to-jsx';
 import { BsDot } from 'react-icons/bs';
