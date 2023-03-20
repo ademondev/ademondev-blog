@@ -35,7 +35,7 @@ export const Post: FC<PostType> = ({ postData }) => {
             <div className="grid grid-cols-4 grid-rows-2 justify-center items-center text-center mb-14
                 md:mb-20"
             >
-                <h1 className='col-start-1 col-end-5 row-start-1 text-2xl font-bold text-not-quite-black
+                <h1 className='px-4 col-start-1 col-end-5 row-start-1 text-2xl font-bold text-not-quite-black
                     md:text-5xl'
                 >
                     {postData.title}
