@@ -49,9 +49,8 @@ export const HeaderCombobox: FC<PostType> = ({ postData }) => {
               </div>
             ) : (
               filteredpostData.map((postData) => (
-                <Link href={`/posts/${postData.id}`}>
+                <Link key={postData.id} href={`/posts/${postData.id}`}>
                     <Combobox.Option
-                      key={postData.id}
                       className={({ active }) =>
                         `relative cursor-pointer select-none py-2 pl-10 pr-4 ${active ? 'bg-logo-blue text-white' : 'text-gray-900'
                         }`
