@@ -28,7 +28,7 @@ export const PostsContainer: FC<Props> = ({ postData }) => {
     return (
         <div className="bg-not-quite-black text-white flex flex-col justify-center items-center pb-16">
             <div
-                className="text-2xl text-left mb-5 font-semibold
+                className="text-3xl text-left mb-5 font-semibold
                 md:text-5xl md:font-semibold md:mb-10"
             >
                 Latest posts
