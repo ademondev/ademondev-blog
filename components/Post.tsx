@@ -1,6 +1,10 @@
 import React, { FC } from 'react';
 import Date from '../components/Date';
 import Image from 'next/image';
+import Markdown from 'markdown-to-jsx';
+import { BsDot } from 'react-icons/bs';
+import { readingTime } from '../lib/readingTime';
+import { FiBookOpen } from 'react-icons/fi';
 
 type PostType = {
     postData: Post
@@ -25,12 +29,44 @@ export const Post: FC<PostType> = ({ postData }) => {
                 </svg>
             </div>
         </div>
-        <article className='bg-white'>
-            <h1 className=''>{postData.title}</h1>
-            <div className=''>
-                <Date dateString={postData.date} />
+        <article className='bg-white mb-20
+            md:mb-36'
+        >
+            <div className="grid grid-cols-4 grid-rows-2 justify-center items-center text-center mb-14
+                md:mb-20"
+            >
+                <h1 className='col-start-1 col-end-5 row-start-1 text-3xl font-bold text-not-quite-black
+                    md:text-5xl'
+                >
+                    {postData.title}
+                </h1>
+                <div className="flex flex-col col-start-1 col-end-5 row-start-2 mt-5
+                    md:flex-row md:justify-center md:items-center md:mt-0 md:text-lg"
+                >
+                    <div className="flex justify-center mr-2 mb-5
+                        md:mr-1 md:mb-0 md:mt-5"
+                    >
+                        <Image src="/images/profile.png" alt="Profile image" width={40} height={50} className="rounded-full" />
+                        <div className="flex items-center font-medium">ademondev</div>
+                    </div>
+                    <div className="flex justify-center
+                        md:mt-5"
+                    >
+                        <div className="flex justify-center items-center">
+                            <BsDot className='hidden md:inline'/>
+                        </div>
+                        <Date dateString={postData.date} />
+                        <div className="flex justify-center items-center">
+                            <BsDot className=''/>
+                            <FiBookOpen className='mr-1 text-not-quite-black' />
+                        </div>
+                        <span>{readingTime(postData.contentHtml)}</span>
+                    </div>
+                </div>
             </div>
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            <article className="prose lg:prose-xl px-4 mx-auto">
+                <Markdown>{postData.contentHtml}</Markdown>
+            </article>
         </article>
     </div>)
 }
