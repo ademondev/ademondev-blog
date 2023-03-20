@@ -31,7 +31,7 @@ const Header: FC<PostType> = ({ postData }) => {
     }, [prevScrollPos, visible, handleScroll]);
 
     return (
-        <header className={`h-16 bg-white border-b-[1px] border-gray-400 fixed top-0 w-full z-50 transition-all duration-300 ${
+        <header className={`h-16 px-2 bg-white border-b-[1px] border-gray-400 fixed top-0 w-full z-50 transition-all duration-300 ${
             visible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}>
             <div className="flex justify-between xl:max-w-7xl xl:mx-auto">
