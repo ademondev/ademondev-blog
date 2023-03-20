@@ -23,7 +23,7 @@ export default function Home({
       </Head>
       <Header postData={allPostsData}/>
       <div className="mt-16">
-        <Hero />
+        <Hero id={allPostsData[Math.floor(Math.random() * allPostsData.length)].id}/>
       </div>
       <PostsContainer postData={allPostsData} />
     </HomeLayout>
@@ -32,7 +32,6 @@ export default function Home({
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
-  console.log(allPostsData)
   return {
     props: {
       allPostsData

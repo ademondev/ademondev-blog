@@ -1,7 +1,10 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
-type Props = {}
+interface Props {
+    id: string;
+}
 
 export const Hero: FC<Props> = (props) => {
     return (<>
@@ -23,10 +26,12 @@ export const Hero: FC<Props> = (props) => {
                     ...where I share my experience for others to learn <span className='font-bold'>faster</span>
                 </div>
                 <div className="">
-                    <button className="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg mt-10
-                        transition-all duration-200 shadow-lg hover:shadow-blue-600 active:scale-95">
-                        Read random post
-                    </button>
+                    <Link href={`/posts/${props.id}`}>
+                        <button className="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg mt-10 select-none
+                            transition-all duration-200 shadow-lg hover:shadow-blue-600 active:scale-95">
+                            Read random post
+                        </button>
+                    </Link>
                 </div>
                 <div className="absolute bottom-0 top-full overflow-x-hidden">
                     <Image src="/svg/wave.svg" width={10000} height={600} alt="ademondev logo" className='text-white' />
