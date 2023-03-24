@@ -38,9 +38,14 @@ export const Hero: FC<Props> = (props) => {
                 </div>
             </div>
         </div>
-        <div className="bottom-0 left-0 overflow-hidden text-white">
-            <svg data-name="Layer 1" className='fill-not-quite-black' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
+        <div className="h-32 w-full relative overflow-hidden">
+            {/* <div className="w-[200%] h-full absolute bottom-0 left-0 border border-red-600 animate-wave"></div> */}
+            <svg className='animate-wave w-[200%] h-full fill-not-quite-black top-3 absolute bottom-0 left-0' preserveAspectRatio='none' version="1.1" viewBox="0 0 264.58 39.731" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(-5.7615 -112.65)">
+                    <g transform="translate(-8.97 -17.228)">
+                        <path d="m105.84 129.88c-37.666-0.17597-61.037 33.339-91.112 13.338v26.392h264.58v-26.392c-64.593-40.402-92.604 26.392-132.29 0-15.644-9.7848-29.142-13.282-41.179-13.338z"  />
+                    </g>
+                </g>
             </svg>
         </div>
     </>)
