@@ -25,6 +25,7 @@ module.exports = {
       },
       animation: {
         wave: 'wave linear 7s infinite',
+        wave2: 'wave linear 8s infinite',
       }
     },
   },

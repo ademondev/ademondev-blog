@@ -24,7 +24,7 @@ export const Footer: FC<Footer> = ({ black = true }) => {
     ]
     return (<>
         <div className={`h-32 w-full relative overflow-hidden ${black ? 'bg-not-quite-black' : 'bg-white'}`}>
-            <svg className='animate-wave w-[200%] h-full fill-black absolute bottom-0 left-0' preserveAspectRatio='none' version="1.1" viewBox="0 0 264.58 39.731" xmlns="http://www.w3.org/2000/svg">
+            <svg className='animate-wave2 w-[200%] h-full fill-black absolute bottom-0 left-0' preserveAspectRatio='none' version="1.1" viewBox="0 0 264.58 39.731" xmlns="http://www.w3.org/2000/svg">
                 <g transform="translate(-5.7615 -112.65)">
                     <g transform="translate(-8.97 -17.228)">
                         <path d="m105.84 129.88c-37.666-0.17597-61.037 33.339-91.112 13.338v26.392h264.58v-26.392c-64.593-40.402-92.604 26.392-132.29 0-15.644-9.7848-29.142-13.282-41.179-13.338z" />
